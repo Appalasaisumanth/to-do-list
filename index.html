@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <div id="heading">
+        <h1>To do list</h1>
+        <img src="Screenshot 2024-04-09 195456.png" alt="logo of todo_list" >
+
+    </div>
+    <div id="total">
+        <label for="idea"> enter some thing</label>
+        <input type="text" placeholder="eg..write an assignment" id="idea">
+        <label for="idea2"> has to be notified before </label>
+        <input type="datetime-local" placeholder="2024-04-10" id="idea2">
+        <button onclick="insert()">submit</button>
+    </div>
+    <h4>displaying to-do list</h4>
+    <span>
+        <table id="myTable">
+
+            <tr>
+                <td >s.no</td>
+                <td>event</td>
+                <td>time to be notified</td>
+                <td>delete</td>
+                <td>checkbox</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>submitting an assignment</td>
+                <td>2023-04-09 23:00</td>
+                <td><input type="checkbox" id="raw1" onclick="del(this)"></td>
+                <td> <input type="checkbox"></td>
+            </tr>
+
+        </table>
+    </span>
+    <script>
+        var i = 1;
+        function del(checkbox){
+
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    var parent = this.parentElement.parentElement;
+                    parent.parentElement.removeChild(parent);
+                    
+                }
+            });
+        }
+       
+    function insert() {
+        i += 1;
+        var p = 'raw' + i;
+        var t = document.getElementById('idea').value;
+        var k = document.getElementById('idea2').value;
+        var table = document.getElementById('myTable');
+        table.innerHTML += `<tr> <td>${i}</td><td>${t}</td><td>${k}</td><td><input type="checkbox" id="${p}" onclick="del(this)"></td><td> <input type="checkbox"></td></tr>`;
+       
+    }
+    </script>
+
+</body>
+
+</html>
