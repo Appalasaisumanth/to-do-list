@@ -1,0 +1,77 @@
+body{
+    background-color: aqua;
+}
+img{
+    position:fixed;
+    top:3%;
+    right:5%;
+    min-height: 50px;
+    min-width: 50px;
+    max-width:10%;
+    max-height:50%
+
+}
+h1{ top:0;
+    font-family:cursive;
+    color:blueviolet;
+    padding-left:30%;
+    
+}
+#total{
+    display:inline;
+
+}
+#total>label{
+    font-family:cursive;
+    color:blueviolet;
+    text-transform: capitalize;
+    text-shadow: 5px;
+
+}
+#total>input{
+    border:5px solid aqua;
+    background-color: rgb(207, 122, 249);
+    border-radius: 10px;
+    padding:5px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    
+}
+#total>button{
+    background-color: blueviolet;
+    border:2px solid aqua;
+    border-radius:25px;
+}
+#total>button:active{
+    background-color: rgb(123, 239, 239);
+    box-shadow: 5px;
+    border:2px solid blue;
+}
+h4{
+    vertical-align: center;
+    padding-left:30%;
+    text-transform: capitalize;
+    color:blueviolet;
+    font-family:cursive;
+}
+td,th{
+ margin:1opx solid black;
+ padding-left:10px;
+ padding-right:10px;
+ border-bottom: 2px solid violet;
+}
+tr{
+    text-transform:capitalize;
+    font-family:cursive;
+    color:darkblue;
+    width:100%;
+
+}
+td:first-child()
+{
+    border-bottom:2px solid aqua;
+}
+tr:first-child()
+{
+    border-bottom:aqua;
+}
